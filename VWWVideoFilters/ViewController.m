@@ -14,7 +14,7 @@
     GPUImageVideoCamera *videoCamera;
     GPUImageOutput<GPUImageInput> *filter;
     GPUImagePicture *sourcePicture;
-    
+    GPUImageMovieWriter *movieWriter;
     GPUImageUIElement *uiElementInput;
     
     GPUImageFilterPipeline *pipeline;
@@ -1572,6 +1572,17 @@
         {
             [filter addTarget:filterView];
         }
+        
+//        NSString *pathToMovie = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/Movie.m4v"];
+//        unlink([pathToMovie UTF8String]); // If a file already exists, AVAssetWriter won't let you record new frames, so delete the old movie
+//        NSURL *movieURL = [NSURL fileURLWithPath:pathToMovie];
+//        movieWriter = [[GPUImageMovieWriter alloc] initWithMovieURL:movieURL size:CGSizeMake(480.0, 640.0)];
+//        movieWriter.encodingLiveVideo = YES;
+//        //    movieWriter = [[GPUImageMovieWriter alloc] initWithMovieURL:movieURL size:CGSizeMake(640.0, 480.0)];
+//        //    movieWriter = [[GPUImageMovieWriter alloc] initWithMovieURL:movieURL size:CGSizeMake(720.0, 1280.0)];
+//        //    movieWriter = [[GPUImageMovieWriter alloc] initWithMovieURL:movieURL size:CGSizeMake(1080.0, 1920.0)];
+//        [filter addTarget:movieWriter];
+//        [filter addTarget:filterView];
     }
     
     [videoCamera startCameraCapture];
