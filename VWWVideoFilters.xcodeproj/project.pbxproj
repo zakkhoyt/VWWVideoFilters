@@ -14,6 +14,8 @@
 		CF555E111B196C960094BFCD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF555E101B196C960094BFCD /* Images.xcassets */; };
 		CF555E141B196C960094BFCD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF555E121B196C960094BFCD /* LaunchScreen.xib */; };
 		CF555E201B196C960094BFCD /* VWWVideoFiltersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF555E1F1B196C960094BFCD /* VWWVideoFiltersTests.m */; };
+		CF555E381B196CFF0094BFCD /* FiltersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF555E371B196CFE0094BFCD /* FiltersTableViewController.m */; };
+		CF555E391B196F210094BFCD /* libGPUImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF555E301B196CC20094BFCD /* libGPUImage.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,6 +25,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = CF555DFF1B196C960094BFCD;
 			remoteInfo = VWWVideoFilters;
+		};
+		CF555E2F1B196CC20094BFCD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF555E291B196CC20094BFCD /* GPUImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BCF1A33414DDB1EC00852800;
+			remoteInfo = GPUImage;
+		};
+		CF555E311B196CC20094BFCD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF555E291B196CC20094BFCD /* GPUImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BCE209E51943F20C002FEED8;
+			remoteInfo = GPUImageFramework;
+		};
+		CF555E331B196CD00094BFCD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF555E291B196CC20094BFCD /* GPUImage.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BCF1A33314DDB1EC00852800;
+			remoteInfo = GPUImage;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -40,6 +63,9 @@
 		CF555E191B196C960094BFCD /* VWWVideoFiltersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VWWVideoFiltersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF555E1E1B196C960094BFCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF555E1F1B196C960094BFCD /* VWWVideoFiltersTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VWWVideoFiltersTests.m; sourceTree = "<group>"; };
+		CF555E291B196CC20094BFCD /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = GPUImage/GPUImage.xcodeproj; sourceTree = "<group>"; };
+		CF555E361B196CFE0094BFCD /* FiltersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiltersTableViewController.h; sourceTree = "<group>"; };
+		CF555E371B196CFE0094BFCD /* FiltersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiltersTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF555E391B196F210094BFCD /* libGPUImage.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +90,7 @@
 		CF555DF71B196C960094BFCD = {
 			isa = PBXGroup;
 			children = (
+				CF555E291B196CC20094BFCD /* GPUImage.xcodeproj */,
 				CF555E021B196C960094BFCD /* VWWVideoFilters */,
 				CF555E1C1B196C960094BFCD /* VWWVideoFiltersTests */,
 				CF555E011B196C960094BFCD /* Products */,
@@ -89,6 +117,8 @@
 				CF555E101B196C960094BFCD /* Images.xcassets */,
 				CF555E121B196C960094BFCD /* LaunchScreen.xib */,
 				CF555E031B196C960094BFCD /* Supporting Files */,
+				CF555E361B196CFE0094BFCD /* FiltersTableViewController.h */,
+				CF555E371B196CFE0094BFCD /* FiltersTableViewController.m */,
 			);
 			path = VWWVideoFilters;
 			sourceTree = "<group>";
@@ -119,6 +149,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		CF555E2A1B196CC20094BFCD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CF555E301B196CC20094BFCD /* libGPUImage.a */,
+				CF555E321B196CC20094BFCD /* GPUImage.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -133,6 +172,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				CF555E341B196CD00094BFCD /* PBXTargetDependency */,
 			);
 			name = VWWVideoFilters;
 			productName = VWWVideoFilters;
@@ -186,6 +226,12 @@
 			mainGroup = CF555DF71B196C960094BFCD;
 			productRefGroup = CF555E011B196C960094BFCD /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = CF555E2A1B196CC20094BFCD /* Products */;
+					ProjectRef = CF555E291B196CC20094BFCD /* GPUImage.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				CF555DFF1B196C960094BFCD /* VWWVideoFilters */,
@@ -193,6 +239,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		CF555E301B196CC20094BFCD /* libGPUImage.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libGPUImage.a;
+			remoteRef = CF555E2F1B196CC20094BFCD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CF555E321B196CC20094BFCD /* GPUImage.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GPUImage.framework;
+			remoteRef = CF555E311B196CC20094BFCD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		CF555DFE1B196C960094BFCD /* Resources */ = {
@@ -222,6 +285,7 @@
 				CF555E0C1B196C960094BFCD /* ViewController.m in Sources */,
 				CF555E091B196C960094BFCD /* AppDelegate.m in Sources */,
 				CF555E061B196C960094BFCD /* main.m in Sources */,
+				CF555E381B196CFF0094BFCD /* FiltersTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +304,11 @@
 			isa = PBXTargetDependency;
 			target = CF555DFF1B196C960094BFCD /* VWWVideoFilters */;
 			targetProxy = CF555E1A1B196C960094BFCD /* PBXContainerItemProxy */;
+		};
+		CF555E341B196CD00094BFCD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GPUImage;
+			targetProxy = CF555E331B196CD00094BFCD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -299,7 +368,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -337,7 +406,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -349,7 +418,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"GPUImage/**",
+				);
 				INFOPLIST_FILE = VWWVideoFilters/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -359,7 +434,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"GPUImage/**",
+				);
 				INFOPLIST_FILE = VWWVideoFilters/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
